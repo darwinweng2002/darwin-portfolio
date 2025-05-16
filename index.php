@@ -137,7 +137,7 @@
   <div class="row align-items-center">
     <!-- 📝 Left Content -->
     <div class="col-md-6 text-center text-md-start">
-      <p class="contact-email mb-3"><i class="bi bi-envelope-fill"></i> vdarwin860@gmail.com</p>
+      <p class="contact-email mb-3"><i class="bi bi-envelope-fill"></i> vvdarwin860@gmail.com</p>
       <div class="badge-bubble mb-2"><i class="bi bi-chat-dots-fill me-1"></i> It's me</div>
 
       <h1 class="mt-3">Darwin<br>Villanueva</h1>
