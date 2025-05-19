@@ -125,40 +125,6 @@ footer {
   padding: 20px;
   margin-top: auto;
 }
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.85);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.fade-up {
-  animation: fadeUp 0.9s ease-out forwards;
-}
-
-.scale-in {
-  animation: scaleIn 0.9s ease-out forwards;
-}
-
-.delayed {
-  animation-delay: 0.4s;
-}
-
   </style>
 </head>
 <body>
@@ -167,7 +133,7 @@ footer {
   <i class="fas fa-bars"></i>
 </button>
 <!-- 🧑🏻 Portfolio Content -->
-<main class="container my-5 flex-grow-1 fade-up">
+<main class="container my-5 flex-grow-1">
   <div class="row align-items-center">
     <!-- 📝 Left Content -->
     <div class="col-md-6 text-center text-md-start">
@@ -189,7 +155,7 @@ footer {
     </div>
 
     <div class="col-md-6 text-center mt-4 mt-md-0">
-      <img src="assets/uploads/portfolio-image.jpeg" alt="Your Avatar" class="avatar-img scale-in delayed">
+      <img src="assets/uploads/portfolio-image.jpeg" alt="Your Avatar" class="avatar-img">
     </div>
   </div>
 </main>
