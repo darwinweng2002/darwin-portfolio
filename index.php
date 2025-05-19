@@ -140,7 +140,7 @@
       <p class="contact-email mb-3"><i class="bi bi-envelope-fill"></i> vvdarwin860@gmail.com</p>
       <div class="badge-bubble mb-2"><i class="bi bi-chat-dots-fill me-1"></i> It's me</div>
 
-      <h1 class="mt-3">Darwin<br>Villanueva</h1>
+      <h1 class="mt-3">Daneil<br>Villanueva</h1>
       <h2 class="text-muted">Junior Web Developer</h2>
 
       <p class="mt-3">Hello I am Darwin Villanueva. A passionate web developer who loves to build engaging websites using modern tools like HTML, CSS, JS, PHP, and MySQL.</p>
