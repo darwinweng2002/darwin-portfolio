@@ -2,45 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume - John Doe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Resume - John Doe</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <style>
+    :root {
+      --primary-color: #343a40;
+      --accent-color: #0d6efd;
+      --text-muted: #6c757d;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f8f9fa;
-      color: #212529;
+      color: var(--primary-color);
     }
 
-    h1, h4, h5 {
-      color: #000;
+    #resume {
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
+      border-radius: 10px;
     }
 
-    h4 {
-      border-bottom: 2px solid #000;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
+    .resume-header {
+      background: var(--primary-color);
+      color: #fff;
+      padding: 2rem;
+      border-radius: 10px 10px 0 0;
+      text-align: center;
     }
 
-    ul {
-      padding-left: 20px;
+    .resume-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.2rem;
     }
 
-    /* Hide print button when printing */
+    .resume-header h5 {
+      font-weight: 300;
+    }
+
+    .section-title {
+      border-left: 4px solid var(--accent-color);
+      padding-left: 0.5rem;
+      margin-top: 2rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .contact-box {
+      border: 1px solid #dee2e6;
+      padding: 1rem;
+      border-radius: 5px;
+      background-color: #f1f3f5;
+    }
+
+    ul.custom-list {
+      padding-left: 1.2rem;
+    }
+
+    ul.custom-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .shadow-box {
+      background-color: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      margin-bottom: 1.5rem;
+    }
+
     @media print {
       .d-print-none {
         display: none !important;
       }
 
       body {
-        background: white;
+        background: #fff !important;
+        color: #000 !important;
       }
 
       #resume {
-        width: 100%;
-        margin: 0;
+        box-shadow: none !important;
         padding: 0;
+        border-radius: 0;
+      }
+
+      .resume-header {
+        color: #000 !important;
+        background: none !important;
+        border-bottom: 2px solid #000;
       }
     }
   </style>
@@ -48,90 +101,88 @@
 <body>
 
   <div class="container my-5" id="resume">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h1 class="fw-bold">John Doe</h1>
-      <button onclick="window.print()" class="btn btn-outline-dark d-print-none">🖨️ Print</button>
+    
+    <div class="resume-header">
+      <h1>John Doe</h1>
+      <h5>Full Stack Web Developer</h5>
+      <button onclick="window.print()" class="btn btn-light mt-3 d-print-none">🖨️ Print Resume</button>
     </div>
 
-    <h5 class="text-muted">Full Stack Web Developer</h5>
-    <hr />
-
     <!-- Contact Info -->
-    <section class="mb-4">
-      <div class="row">
+    <div class="contact-box my-4">
+      <div class="row text-center text-md-start">
         <div class="col-md-4"><strong>Email:</strong> johndoe@email.com</div>
         <div class="col-md-4"><strong>Phone:</strong> +123-456-7890</div>
         <div class="col-md-4"><strong>LinkedIn:</strong> linkedin.com/in/johndoe</div>
       </div>
-    </section>
+    </div>
 
     <!-- Summary -->
-    <section class="mb-4">
-      <h4>Summary</h4>
+    <div class="shadow-box">
+      <div class="section-title">🎯 Summary</div>
       <p>
-        Results-driven and adaptable web developer with 5+ years of experience in designing, building, and maintaining responsive websites and web applications using modern technologies including PHP, MySQL, JavaScript, and Bootstrap.
+        Passionate, detail-oriented Full Stack Developer with over 5 years of experience in building scalable web applications and dynamic user interfaces. Proficient in both frontend and backend development using PHP, MySQL, JavaScript, and modern frameworks.
       </p>
-    </section>
+    </div>
 
     <!-- Skills -->
-    <section class="mb-4">
-      <h4>Skills</h4>
-      <ul class="row list-unstyled">
+    <div class="shadow-box">
+      <div class="section-title">🛠️ Skills</div>
+      <ul class="row list-unstyled custom-list">
         <li class="col-md-3">HTML5 / CSS3</li>
         <li class="col-md-3">Bootstrap 5</li>
-        <li class="col-md-3">JavaScript</li>
+        <li class="col-md-3">JavaScript / jQuery</li>
         <li class="col-md-3">PHP / MySQL</li>
+        <li class="col-md-3">RESTful APIs</li>
         <li class="col-md-3">Git / GitHub</li>
-        <li class="col-md-3">REST APIs</li>
-        <li class="col-md-3">jQuery</li>
-        <li class="col-md-3">Laravel</li>
+        <li class="col-md-3">Laravel (basic)</li>
+        <li class="col-md-3">Responsive Design</li>
       </ul>
-    </section>
+    </div>
 
     <!-- Experience -->
-    <section class="mb-4">
-      <h4>Experience</h4>
-      <div class="mb-3">
-        <h5>Senior Web Developer - ABC Solutions</h5>
-        <p class="text-muted">Jan 2020 - Present</p>
-        <ul>
-          <li>Led backend development using PHP & MySQL to create scalable CMS.</li>
-          <li>Optimized application speed by 40% using caching and query tuning.</li>
-        </ul>
-      </div>
-      <div>
-        <h5>Frontend Developer - XYZ Tech</h5>
-        <p class="text-muted">Jun 2017 - Dec 2019</p>
-        <ul>
-          <li>Implemented responsive UIs using Bootstrap and JavaScript.</li>
-          <li>Collaborated with UX team to improve user experience.</li>
-        </ul>
-      </div>
-    </section>
+    <div class="shadow-box">
+      <div class="section-title">💼 Experience</div>
+
+      <h5 class="mt-3 mb-1">Senior Web Developer – ABC Solutions</h5>
+      <p class="text-muted">Jan 2020 – Present</p>
+      <ul class="custom-list">
+        <li>Led the development of 10+ CMS projects using PHP and MySQL.</li>
+        <li>Integrated REST APIs for dynamic content and services.</li>
+        <li>Implemented performance optimization and security enhancements.</li>
+      </ul>
+
+      <h5 class="mt-4 mb-1">Frontend Developer – XYZ Tech</h5>
+      <p class="text-muted">Jun 2017 – Dec 2019</p>
+      <ul class="custom-list">
+        <li>Developed UI components with Bootstrap, improving mobile UX.</li>
+        <li>Collaborated with cross-functional teams in Agile workflows.</li>
+      </ul>
+    </div>
 
     <!-- Education -->
-    <section class="mb-4">
-      <h4>Education</h4>
-      <p><strong>BSc in Computer Science</strong><br />University of Somewhere, 2013 - 2017</p>
-    </section>
+    <div class="shadow-box">
+      <div class="section-title">🎓 Education</div>
+      <p><strong>BSc in Computer Science</strong><br/>University of Somewhere, 2013 – 2017</p>
+    </div>
 
     <!-- Certifications -->
-    <section class="mb-4">
-      <h4>Certifications</h4>
-      <ul>
+    <div class="shadow-box">
+      <div class="section-title">📜 Certifications</div>
+      <ul class="custom-list">
         <li>Certified PHP Developer – XYZ Academy</li>
         <li>Responsive Web Design – freeCodeCamp</li>
       </ul>
-    </section>
+    </div>
 
     <!-- Projects -->
-    <section class="mb-4">
-      <h4>Projects</h4>
-      <ul>
-        <li><strong>Personal Portfolio:</strong> HTML/CSS/JS portfolio to showcase web projects.</li>
-        <li><strong>Custom CMS:</strong> Built with PHP & MySQL including admin panel and login system.</li>
+    <div class="shadow-box">
+      <div class="section-title">📁 Projects</div>
+      <ul class="custom-list">
+        <li><strong>Portfolio Website:</strong> Responsive showcase built with HTML/CSS/JS.</li>
+        <li><strong>E-Commerce CMS:</strong> Full-stack PHP system with admin & login features.</li>
       </ul>
-    </section>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
